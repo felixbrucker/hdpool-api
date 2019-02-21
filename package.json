@@ -1,0 +1,21 @@
+{
+  "name": "hdpool-api",
+  "version": "1.0.0",
+  "description": "Interact with the HDPool account and mining related API programatically.",
+  "keywords": [
+    "hdpool",
+    "api",
+    "bhd",
+    "mining"
+  ],
+  "repository": "https://github.com/felixbrucker/hdpool-api.git",
+  "bugs": "https://github.com/felixbrucker/hdpool-api/issues",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "reconnecting-websocket": "^4.1.10",
+    "ws": "^6.1.4"
+  },
+  "engines": {
+    "node": "^10.0.0"
+  }
+}
