@@ -35,6 +35,11 @@ const hdpoolAccountApi = new HDPoolAccountApi(userId, sessionKey);
   
   await hdpoolAccountApi.rent(Math.round(2 * Math.pow(10, 8)), 7);  // rent 2 BHD for 7 days
   await hdpoolAccountApi.lend(Math.round(5 * Math.pow(10, 8)), 15); // lend 5 BHD for 15 days
+  await hdpoolAccountApi.withdraw(Math.round(5 * Math.pow(10, 8))); // withdraw 5 BHD
+  const {
+    pool_wallet_addr,
+    trans_amount,
+  } = await hdpoolAccountApi.deposit(Math.round(5 * Math.pow(10, 8))); // deposit 5 BHD, actual amount to send might differ
   
   hdpoolAccountApi.onBestMiningInfo(bestMiningInfo => {
     // Do stuff
