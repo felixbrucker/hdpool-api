@@ -33,10 +33,13 @@ const hdpoolAccountApi = new HDPoolAccountApi(userId, sessionKey);
   const rentingOrderHistory = await hdpoolAccountApi.getRentingOrderHistory();
   const lendingEarningsStats = await hdpoolAccountApi.getLendingEarningsStats();
   const lendingOrderHistory = await hdpoolAccountApi.getLendingOrderHistory();
+  const poolStats = await hdpoolAccountApi.getPoolStats();
+  const nextFreePaymentDate = await hdpoolAccountApi.getNextFreePaymentDate(); // When we can send a payout without paying fees
   
   await hdpoolAccountApi.rent(Math.round(2 * Math.pow(10, 8)), 7);  // rent 2 BHD for 7 days
   await hdpoolAccountApi.lend(Math.round(5 * Math.pow(10, 8)), 15); // lend 5 BHD for 15 days
   await hdpoolAccountApi.withdraw(Math.round(5 * Math.pow(10, 8))); // withdraw 5 BHD
+  await hdpoolAccountApi.cancelWithdraw(1234); // Cancel the withdraw with id 1234
   const {
     pool_wallet_addr,
     trans_amount,
