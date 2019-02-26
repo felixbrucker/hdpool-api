@@ -12,7 +12,7 @@
   "bugs": "https://github.com/felixbrucker/hdpool-api/issues",
   "license": "GPL-3.0",
   "dependencies": {
-    "moment": "^2.24.0",
+    "dayjs": "^1.8.8",
     "reconnecting-websocket": "^4.1.10",
     "ws": "^6.1.4"
   },
