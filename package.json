@@ -14,7 +14,7 @@
   "dependencies": {
     "dayjs": "^1.8.8",
     "reconnecting-websocket": "^4.1.10",
-    "ws": "^6.1.4"
+    "ws": "^6.2.0"
   },
   "engines": {
     "node": "^10.0.0"
