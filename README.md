@@ -59,6 +59,7 @@ const client = new HDPoolAccountApi(userId, sessionKey);
   
   await client.rent(Math.round(2 * Math.pow(10, 8)), 7);  // rent 2 BHD for 7 days
   await client.lend(Math.round(5 * Math.pow(10, 8)), 15); // lend 5 BHD for 15 days
+  await client.cancelRentingOrder(1234, 'some reason');
   await client.withdraw(Math.round(5 * Math.pow(10, 8))); // withdraw 5 BHD
   await client.cancelWithdraw(1234); // Cancel the withdraw with id 1234
   const {
