@@ -41,7 +41,7 @@ const client = new HDPoolAccountApi(userId, sessionKey);
   await client.init();
 
   const userInfo = await client.getUserInfo();
-  const generalStats = await client.getGeneralStats();
+  const earningsStats = await client.getEarningsStats();
   const miners = await client.getMiners();
   const pledgeState = await client.getPledgeState();
   const boundPlotter = await client.getBoundPlotter();
@@ -49,23 +49,12 @@ const client = new HDPoolAccountApi(userId, sessionKey);
   const withdrawHistory = await client.getWithdrawHistory();
   const earningsHistory = await client.getEarningsHistory();
   const expectedEarningsHistory = await client.getExpectedEarningsHistory();
-  const rentalDetails = await client.getRentalDetails();
-  const rentingState = await client.getRentingState();
-  const rentingOrderHistory = await client.getRentingOrderHistory();
-  const lendingEarningsStats = await client.getLendingEarningsStats();
-  const lendingOrderHistory = await client.getLendingOrderHistory();
   const poolStats = await client.getPoolStats();
   const nextFreePaymentDate = await client.getNextFreePaymentDate(); // When we can send a payout without paying fees
   
-  await client.rent(Math.round(2 * Math.pow(10, 8)), 7);  // rent 2 BHD for 7 days
-  await client.lend(Math.round(5 * Math.pow(10, 8)), 15); // lend 5 BHD for 15 days
-  await client.cancelRentingOrder(1234, 'some reason');
-  await client.withdraw(Math.round(5 * Math.pow(10, 8))); // withdraw 5 BHD
+  await client.withdraw(Math.round(5 * Math.pow(10, 8)), 'some code'); // withdraw 5 BHD
   await client.cancelWithdraw(1234); // Cancel the withdraw with id 1234
-  const {
-    pool_wallet_addr,
-    trans_amount,
-  } = await client.deposit(Math.round(5 * Math.pow(10, 8))); // deposit 5 BHD, actual amount to send might differ
+  const depositAddr= await client.getDepositAddr(); // retrieve your deposit addr
   
   client.onBestMiningInfo(bestMiningInfo => {
     // Do stuff

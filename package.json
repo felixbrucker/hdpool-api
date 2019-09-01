@@ -1,7 +1,7 @@
 {
   "name": "hdpool-api",
-  "version": "1.5.3",
-  "description": "Interact with the HDPool account and mining related API programatically.",
+  "version": "2.0.0",
+  "description": "Interact with the HDPool account and mining related API programmatically.",
   "keywords": [
     "hdpool",
     "api",
@@ -12,9 +12,9 @@
   "bugs": "https://github.com/felixbrucker/hdpool-api/issues",
   "license": "GPL-3.0",
   "dependencies": {
-    "dayjs": "^1.8.15",
-    "reconnecting-websocket": "^4.1.10",
-    "ws": "^6.2.1"
+    "dayjs": "^1.8.16",
+    "reconnecting-websocket": "^4.2.0",
+    "ws": "^7.1.2"
   },
   "engines": {
     "node": "^10.0.0"
