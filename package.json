@@ -1,6 +1,6 @@
 {
   "name": "hdpool-api",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Interact with the HDPool account and mining related API programmatically.",
   "keywords": [
     "hdpool",
