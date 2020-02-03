@@ -13,7 +13,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "dayjs": "^1.8.16",
-    "reconnecting-websocket": "^4.2.0",
+    "reconnecting-websocket": "^4.3.0",
     "ws": "^7.1.2"
   },
   "engines": {
